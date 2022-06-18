@@ -7,6 +7,7 @@ const session = require("express-session")
 const MongoDBStore = require("connect-mongodb-session")(session);
 const { flash } = require('express-flash-message');
 var csrf = require('csurf');
+require('dotenv').config();
 const port = process.env.PORT || 5000;
 
 const authRoutes = require("./routes/auth");
@@ -62,6 +63,6 @@ app.listen(process.env.PORT || 3000, () => {
     console.log("Listening at 3000");
 });
 
-mongoose.connect(MONGODB_URI, () => {
+mongoose.connect(process.env.MONGODB_URI||MONGODB_URI, () => {
     console.log("connected to db");
 })
