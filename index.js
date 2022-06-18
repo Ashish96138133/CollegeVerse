@@ -6,7 +6,8 @@ const mongoose = require('mongoose');
 const session = require("express-session")
 const MongoDBStore = require("connect-mongodb-session")(session);
 const { flash } = require('express-flash-message');
-var csrf = require('csurf')
+var csrf = require('csurf');
+const port = process.env.PORT || 5000;
 
 const authRoutes = require("./routes/auth");
 const postRoutes = require("./routes/post");
@@ -57,7 +58,7 @@ app.get("/",(req, res) => { // const isLoggedIn = req.get('Cookie').split(";")[1
 });
 
 
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log("Listening at 3000");
 });
 
