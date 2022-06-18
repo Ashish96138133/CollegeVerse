@@ -4,7 +4,7 @@
   "description": "engages student in colleges",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
   "author": "",
   "license": "ISC",
@@ -13,10 +13,10 @@
     "body-parser": "^1.20.0",
     "connect-mongodb-session": "^3.1.1",
     "csurf": "^1.11.0",
-    "ejs": "^3.1.6",
-    "express": "^4.17.3",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
     "express-flash-message": "^2.1.0",
-    "express-session": "^1.17.2",
-    "mongoose": "^6.2.10"
+    "express-session": "^1.17.3",
+    "mongoose": "^6.4.0"
   }
 }

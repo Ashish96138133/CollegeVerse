@@ -58,7 +58,7 @@ app.get("/",(req, res) => { // const isLoggedIn = req.get('Cookie').split(";")[1
 });
 
 
-app.listen(port, () => {
+app.listen(process.env.PORT || 3000, () => {
     console.log("Listening at 3000");
 });
 
