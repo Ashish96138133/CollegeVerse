@@ -42,12 +42,15 @@
                     <% }%>
                       <a href="/content/?id=<%= i %>" class="btn btn-info">Read More</a>
                 </div>
+                
                 <div class="card-footer text-muted d-flex justify-content-between bg-transparent border-top-0">
                   <div class="views">Apr 1, 12:45PM
                   </div>
+
                   <div class="stats">
-                    <i class="fa-solid fa-heart"></i> 30
-                    <i class="fa-solid fa-heart-crack"></i> 12
+                    <!-- <i class="fa-solid fa-heart"></i> 30
+                    <i class="fa-solid fa-heart-crack"></i> 12 -->
+                    <i class="fa-solid fa-heart"><%= blogs[i].upvote %></i>
                   </div>
 
                 </div>

@@ -26,7 +26,8 @@ exports.createPost = async (req, res) => {
             hashTags: hashTags
         })
         const posts = await Post.find({});
-        res.render("posts.ejs", {posts: posts});
+        // res.render("posts.ejs", {posts: posts});
+        res.render("home.ejs");
     } catch (err) {
         console.log(err)
     }

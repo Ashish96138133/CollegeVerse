@@ -13,7 +13,7 @@ const postRoutes = require("./routes/post");
 const createRoutes = require("./routes/create");
 const searchRoutes = require("./routes/search");
 const profileRoutes = require("./routes/profile");
-// const Post = require("../model/post");
+
 
 const req = require("express/lib/request");
 const MONGODB_URI = "mongodb://localhost:27017/collegeApp"
@@ -51,15 +51,9 @@ app.use(postRoutes);
 app.use(searchRoutes);
 app.use(profileRoutes);
 app.get("/",(req, res) => { // const isLoggedIn = req.get('Cookie').split(";")[1].trim().split("=")[1] == 'True';
-    // try {
-    // const blogs = await Post.find({});
-    // const notice = await Post.find({});
-    // const Interview = await Post.find({});
+   
     res.render("home.ejs");
-    // , {blogs}
-    // }catch(err) {
-    //     console.log(err);
-    // }
+
 });
 
 
